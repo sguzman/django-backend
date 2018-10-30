@@ -14,10 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-import django_youtube_app.views
-from graphene_django.views import GraphQLView
+import django_youtube_app
 
 urlpatterns = [
     path('youtube/', django_youtube_app.views.index),
-    path('graphql', GraphQLView.as_view(graphiql=True))
 ]
